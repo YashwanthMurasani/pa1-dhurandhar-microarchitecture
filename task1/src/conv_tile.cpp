@@ -8,8 +8,8 @@ void conv_tile(const float* in, float* out, const float* ker,
     // TODO(student): replace this placeholder with your tiled/blocked implementation.
     const int p = K / 2;
     const int in_stride = W + 2 * p;  // padded row stride
-    int tile_H = 16;
-    int tile_W = 128;
+    int tile_H = 1024;
+    int tile_W = 1024;
 
     for(int ty=0;ty<H;ty+=tile_H){
         int my = std::min(ty+tile_H,H);
